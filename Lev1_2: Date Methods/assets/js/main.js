@@ -34,3 +34,9 @@ document.write(`${date.getHours()} ${"Stunde"}${"<br>"}`)
 document.write(`${date.getMinutes()} ${"Minuten"}${"<br>"}`)
 document.write(`${wochenTag[date.getDay()]}${"<br>"}`)
 document.write(`${monate[date.getMonth()]}${"<br>"}`)
+
+const clock = document.querySelector('#clock');
+const specification = document.querySelector('#specification')
+
+clock.innerHTML = `${wochenTag[1].substring(0, 3)} ${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()} PM`
+specification.innerHTML += `DAY HOURS MINUTES SECONDS PERIOD`
